@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-flink
+  labels:
+    name: demo-flink
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-flink
+  template:
+    metadata:
+      labels:
+        app: demo-flink
+    spec:
+      containers:
+        - name: demo-flink
+          image: zexinpeng97/demo-flink:latest

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-producer
+  labels:
+    name: demo-producer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: producer
+  template:
+    metadata:
+      labels:
+        app: producer
+    spec:
+      containers:
+        - name: producer
+          image: zexinpeng97/demo-producer:latest
+          env:
+          - name: KAFKA_IP
+            value: "kafka-service"
+          ports:
+          - containerPort: 8082

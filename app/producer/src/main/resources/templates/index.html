@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "ISO-8859-1" />
+        <link href = "css/styles.css" rel = "stylesheet"/>
+        <title>Spring Boot Application</title>
+    </head>
+    <body>
+        <h4>Welcome to Zexin web application</h4>
+        <form th:action="@{/index}">
+            <button type="submit" th:name="fruit" th:value="apple"> apple </button>
+            <button type="submit" th:name="fruit" th:value="banana"> banana </button>
+            <button type="submit" th:name="fruit" th:value="lemon"> lemon </button>
+        </form>
+    </body>
+</html>

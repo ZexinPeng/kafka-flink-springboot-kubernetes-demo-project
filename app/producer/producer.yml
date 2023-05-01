@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: demo-producer
+spec:
+   containers:
+   - name: demo-producer
+     image: zexinpeng97/demo-producer:latest
+     ports:
+     - containerPort: 8082
